@@ -1,0 +1,138 @@
+.page-reports {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reports-top-bar {
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reports-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.reports-subtitle {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.reports-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.report-paper {
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.report-doc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid var(--border-subtle);
+  padding-bottom: 20px;
+}
+
+.doc-main-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin: 8px 0 4px 0;
+  color: var(--text-primary);
+}
+
+.doc-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.report-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-light);
+}
+
+.section-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.report-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.report-kpi-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kpi-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.kpi-num {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.kpi-note {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.report-bullets {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .navbar, .sidebar, .reports-top-bar {
+    display: none !important;
+  }
+  .report-paper {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    color: #000000 !important;
+    padding: 0 !important;
+  }
+  .report-kpi-box {
+    border: 1px solid #ccc !important;
+    background: #f8f9fa !important;
+  }
+}
