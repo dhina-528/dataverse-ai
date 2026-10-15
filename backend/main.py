@@ -1,5 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 from .routes.upload import router as upload_router
 from .routes.analytics import router as analytics_router
 from .routes.insights import router as insights_router

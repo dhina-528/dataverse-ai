@@ -1,54 +1,110 @@
 :root {
-  /* Color Palette - Cyber Indigo & Deep Slate */
-  --bg-primary: #090d16;
-  --bg-secondary: #0f172a;
-  --bg-tertiary: #1e293b;
-  --bg-card: rgba(15, 23, 42, 0.75);
-  --bg-card-hover: rgba(30, 41, 59, 0.85);
-  --bg-glass: rgba(255, 255, 255, 0.03);
-  --bg-glass-active: rgba(99, 102, 241, 0.12);
+  /* ==========================================================================
+     DATAVERSE.AI — EDITORIAL MINIMAL DESIGN SYSTEM
+     Palette: White, Off-white, Pale Cyan (#D5F0F0), Neon Yellow (#F2FF00),
+     Charcoal (#20232B), Dark Text (#171717), Muted Blue-Gray (#A9BBCB)
+     ========================================================================== */
 
-  /* Primary Accent & Gradients */
-  --primary: #6366f1;
-  --primary-light: #818cf8;
-  --primary-dark: #4f46e5;
-  --primary-glow: rgba(99, 102, 241, 0.35);
-  
-  --accent-cyan: #06b6d4;
-  --accent-emerald: #10b981;
-  --accent-amber: #f59e0b;
-  --accent-rose: #f43f5e;
-  --accent-purple: #a855f7;
+  /* Canvas and surfaces */
+  --bg-app: #F7F7F4;
+  --bg-primary: #FFFFFF;
+  --bg-surface: #FFFFFF;
+  --bg-sidebar: #FFFFFF;
+  --bg-secondary: #F1F4F5;
+  --bg-card: #FFFFFF;
+  --bg-panel: #FFFFFF;
+  --bg-card-hover: #F8FAFB;
+  --bg-elevated: #FFFFFF;
+  --bg-modal: #FFFFFF;
+  --bg-dropdown: #FFFFFF;
+  --bg-input: #FFFFFF;
+  --bg-tertiary: #E8EEF1;
+  --bg-glass: rgba(255, 255, 255, 0.92);
+  --bg-glass-active: rgba(213, 240, 240, 0.5);
 
-  /* Typography Colors */
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --text-inverse: #090d16;
+  /* Curated Editorial Accents */
+  --pale-cyan: #D5F0F0;
+  --pale-cyan-light: #EBF7F7;
+  --pale-cyan-border: #BDEDED;
+  --neon-yellow: #F2FF00;
+  --neon-yellow-hover: #E3EF00;
+  --neon-yellow-text: #171717;
+  --muted-blue-gray: #A9BBCB;
+  --charcoal: #20232B;
+  --charcoal-light: #2D333E;
 
-  /* Borders & Dividers */
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-focus: rgba(99, 102, 241, 0.5);
-  --border-glow: 0 0 15px rgba(99, 102, 241, 0.25);
+  /* Primary Brand Tokens (Editorial Charcoal with Neon Yellow highlight) */
+  --primary: #171717;
+  --brand-violet: #171717;
+  --primary-hover: #262626;
+  --brand-violet-active: #000000;
+  --primary-light: #3F4756;
+  --primary-dark: #000000;
+  --primary-glow: rgba(242, 255, 0, 0.35);
+
+  --accent-cyan: #0E7490;
+  --secondary-cyan: #0284C7;
+  --accent-teal: #0D9488;
+  --teal: #0D9488;
+
+  /* Semantic status colors (Tuned for light editorial legibility) */
+  --status-success: #059669;
+  --accent-emerald: #059669;
+  --emerald: #059669;
+
+  --status-warning: #D97706;
+  --accent-amber: #D97706;
+  --amber: #D97706;
+
+  --status-error: #E11D48;
+  --accent-rose: #E11D48;
+  --rose: #E11D48;
+
+  --status-info: #0284C7;
+  --cyan: #0284C7;
+
+  /* Text colors */
+  --text-primary: #171717;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --text-disabled: #94A3B8;
+  --text-inverse: #FFFFFF;
+
+  /* Borders and dividers */
+  --border-default: #E2E8F0;
+  --border-subtle: #EDF2F7;
+  --border-divider: #E2E8F0;
+  --border-focus: #171717;
+  --border-cyan: #BDEDED;
+  --border-glow: 0 0 12px rgba(242, 255, 0, 0.45);
+
+  /* Chart color palette (High-contrast editorial scheme) */
+  --chart-1: #171717; /* charcoal/black primary */
+  --chart-2: #0284C7; /* crisp cyan */
+  --chart-3: #0D9488; /* teal */
+  --chart-4: #D97706; /* amber */
+  --chart-5: #E11D48; /* rose */
+  --chart-6: #6366F1; /* indigo */
 
   /* Elevation & Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 25px rgba(99, 102, 241, 0.25);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 14px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 32px -4px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.06);
+  --shadow-glow: 0 0 24px rgba(242, 255, 0, 0.25);
+  --shadow-editorial: 0 20px 40px -15px rgba(20, 30, 45, 0.08);
 
   /* Radii & Transitions */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 18px;
-  --radius-xl: 24px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
   --radius-full: 9999px;
 
   --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Fonts */
-  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
 }

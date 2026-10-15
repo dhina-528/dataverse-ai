@@ -1,68 +1,104 @@
 .stat-card {
   position: relative;
-  padding: 22px;
-  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 140px;
+  min-height: 124px;
+  transition: all var(--transition-normal);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 
-.stat-card-glow {
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  filter: blur(30px);
-  opacity: 0.15;
-  pointer-events: none;
+.stat-card:hover {
+  border-color: var(--pale-cyan-border);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
-.stat-card-primary .stat-card-glow { background: var(--primary); }
-.stat-card-cyan .stat-card-glow { background: var(--accent-cyan); }
-.stat-card-emerald .stat-card-glow { background: var(--accent-emerald); }
-.stat-card-amber .stat-card-glow { background: var(--accent-amber); }
+.stat-card-unavailable {
+  opacity: 0.85;
+  background: #FAFBFB;
+  border-color: var(--border-subtle);
+}
+
+.stat-card-unavailable:hover {
+  border-color: var(--border-default);
+  transform: none;
+}
 
 .stat-card-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.stat-title-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .stat-title {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+.stat-tooltip-trigger {
+  cursor: help;
+  display: inline-flex;
+  align-items: center;
+  transition: color var(--transition-fast);
+}
+
+.stat-tooltip-trigger:hover {
+  color: var(--primary-light);
+}
+
+.stat-header-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat-status-badge {
+  font-size: 0.65rem;
+  padding: 2px 7px;
 }
 
 .stat-trend {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 0.725rem;
+  font-weight: 600;
   padding: 2px 8px;
   border-radius: var(--radius-full);
 }
 
 .trend-up {
-  background: rgba(16, 185, 129, 0.15);
-  color: var(--accent-emerald);
+  background: rgba(45, 212, 191, 0.12);
+  color: var(--teal);
+  border: 1px solid rgba(45, 212, 191, 0.25);
 }
 
 .trend-down {
-  background: rgba(244, 63, 94, 0.15);
-  color: var(--accent-rose);
+  background: rgba(251, 113, 133, 0.12);
+  color: var(--rose);
+  border: 1px solid rgba(251, 113, 133, 0.25);
 }
 
 .trend-neutral {
-  background: rgba(148, 163, 184, 0.15);
-  color: var(--text-secondary);
+  background: rgba(148, 163, 184, 0.1);
+  color: var(--text-muted);
+  border: 1px solid rgba(148, 163, 184, 0.2);
 }
 
 .stat-body {
@@ -71,15 +107,76 @@
   gap: 4px;
 }
 
+.stat-main-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
 .stat-value {
-  font-size: 1.85rem;
-  font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--text-primary);
-  font-family: var(--font-sans);
+  line-height: 1.15;
   letter-spacing: -0.02em;
 }
 
+.stat-value-muted {
+  font-size: 1.15rem;
+  color: var(--text-disabled);
+  font-weight: 600;
+}
+
+.stat-sparkline {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
 .stat-subtitle {
-  font-size: 0.75rem;
+  font-size: 0.735rem;
   color: var(--text-muted);
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* Card color accent trims (editorial accent top hairline) */
+.stat-card-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--neon-yellow);
+}
+
+.stat-card-cyan::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--pale-cyan);
+}
+
+.stat-card-amber::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--amber);
+}
+
+.stat-card-emerald::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--teal);
 }
