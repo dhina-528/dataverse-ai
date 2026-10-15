@@ -123,17 +123,59 @@ graph TD
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Technologies & Tools Used
 
-| Layer | Technologies | Purpose |
-| :--- | :--- | :--- |
-| **Frontend** | React 18, Vite 5, Lucide Icons | Responsive glassmorphic analytical UI |
-| **Styling** | Vanilla CSS3 Design System | Modern CSS variables, glassmorphism, animations |
-| **Backend API** | FastAPI, Uvicorn, Pydantic v2 | High-throughput asynchronous REST API |
-| **Data Engine** | Pandas 2.2, NumPy 1.26, OpenPyXL | Ingestion, profiling, cleaning, statistical math |
-| **AI Cloud** | Hugging Face Hub `InferenceClient` | Serverless cloud reasoning (`Llama-3.2-3B-Instruct`) |
-| **AI Local** | Ollama REST API (`/api/generate`) | Privacy-first local LLM inference |
-| **Testing** | Pytest, FastAPI TestClient, AnyIO | Automated backend integration test suite |
+Dataverse AI is built with an enterprise-grade, modern open-source technology stack divided across specialized architectural tiers:
+
+### 🎨 1. Frontend & User Interface
+* **[React 18 (v18.3.1)](https://react.dev/)**: Component-driven reactive UI architecture utilizing modern Hooks (`useState`, `useEffect`, `useMemo`, `useCallback`) and concurrent rendering for smooth data exploration.
+* **[Vite 5 (v5.4.9)](https://vitejs.dev/)**: Next-generation frontend tooling providing sub-millisecond Hot Module Replacement (HMR), fast ES-module bundling, and seamless API reverse-proxy routing to the backend.
+* **[Lucide React (v0.453.0)](https://lucide.dev/)**: Extensive, accessible SVG iconography toolkit for intuitive visual indicators across navigation, telemetry metrics, and data tables.
+* **Pure CSS3 & Glassmorphism Design System**: Tailored design tokens with real-time backdrop blur (`backdrop-filter: blur(16px)`), dynamic gradient borders, curated HSL color gamuts, CSS Grid, and Flexbox layouts.
+* **HTML5 Canvas / Vector Data Visualizations**: Custom, responsive chart rendering engines for revenue trajectories, correlation matrices, category distributions, and anomaly scatter plots.
+
+---
+
+### ⚡ 2. Backend & API Services
+* **[FastAPI (v0.115+)](https://fastapi.tiangolo.com/)**: High-performance, asynchronous web framework built on standard Python type hints, featuring automatic interactive OpenAPI (`/docs`) and ReDoc generation.
+* **[Uvicorn ASGI Server (v0.31+)](https://www.uvicorn.org/)**: Lightning-fast ASGI production web server powered by `uvloop` and `httptools` for handling high concurrency.
+* **[Pydantic v2 (v2.9+)](https://docs.pydantic.dev/)**: High-speed data validation and settings management enforcing strict typing on API payloads, file uploads, and AI prompt requests.
+* **[Python-Multipart (v0.0.12+)](https://multipart.readthedocs.io/)**: Asynchronous multipart form streaming parser for handling large tabular dataset uploads without blocking the server.
+* **[CORS Middleware](https://fastapi.tiangolo.com/tutorial/cors/)**: Granular cross-origin resource sharing configuration enabling secure communication between the Vite frontend and FastAPI backend.
+
+---
+
+### 📊 3. Data Processing, Statistics & Analytics
+* **[Pandas (v2.2+)](https://pandas.pydata.org/)**: High-speed columnar data manipulation, data type inference, duplicate row detection, null imputation, and descriptive statistics.
+* **[NumPy (v1.26+)](https://numpy.org/)**: Vectorized numerical computation, standard deviation calculations, and array mathematics.
+* **[OpenPyXL (v3.1+)](https://openpyxl.readthedocs.io/)**: Modern Microsoft Excel workbook parser enabling ingestion of native `.xlsx` spreadsheets and multi-tab workbooks.
+* **Pearson Correlation Matrix Engine**: Bivariate product-moment correlation calculation across numeric dimensions ($r \in [-1.0, 1.0]$) to discover statistical relationships.
+* **Unsupervised Z-Score Anomaly Detector**: Standardized statistical anomaly detection ($Z = \frac{x - \mu}{\sigma}$) flagging data points exceeding $|Z| \ge 2.5$.
+* **Automated Data Cleaning Engine**: Algorithmic data sanitation applying mean/median/mode imputation, string trimming, case standardization, and deduplication.
+
+---
+
+### 🧠 4. Artificial Intelligence & LLM Reasoning
+* **[Hugging Face Hub (`InferenceClient`)](https://huggingface.co/docs/huggingface_hub/)**: Serverless cloud inference client connecting to cloud-hosted large language models without local GPU requirements.
+* **[Meta LLaMA 3.2 (`meta-llama/Llama-3.2-3B-Instruct`)](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct)**: State-of-the-art instruction-tuned reasoning model specialized in strategic summaries and structured executive insights.
+* **[Ollama Local AI Daemon](https://ollama.com/)**: 100% offline, privacy-preserving local LLM runtime communicating over local REST APIs (`/api/tags`, `/api/generate`).
+* **Zero Numerical Hallucination Prompt Pipeline**: Two-stage hybrid reasoning that feeds deterministically verified Pandas statistical calculations into strict prompt guardrails.
+* **Deterministic Rule-Based Fallback Engine**: Mathematical analytical report generator providing instant strategic briefings even when all external LLMs are offline.
+
+---
+
+### 🌐 5. Networking & Environment
+* **[HTTPX (v0.27+)](https://www.python-httpx.org/)**: Next-generation asynchronous HTTP client with connection pooling for rapid AI service health probing.
+* **[Requests (v2.32+)](https://requests.readthedocs.io/)**: Reliable synchronous HTTP client used for fallback model metadata retrieval and health checks.
+* **[Python-dotenv (v1.0+)](https://github.com/theskumar/python-dotenv)**: 12-Factor application configuration loading variables securely from `.env`.
+
+---
+
+### 🧪 6. Testing & Quality Assurance
+* **[Pytest (v8.3+)](https://docs.pytest.org/)**: Python testing framework executing 14 comprehensive unit and integration tests across data ingestion, statistics, and AI endpoints.
+* **[FastAPI TestClient](https://fastapi.tiangolo.com/tutorial/testing/)**: In-process ASGI test harness executing end-to-end HTTP simulations without network overhead.
+* **[AnyIO (v4.15+)](https://anyio.readthedocs.io/)**: Asynchronous concurrency library powering FastAPI and TestClient asynchronous test fixtures.
+* **[Git & GitHub](https://github.com/)**: Version control with active secret scanning and push protection integration.
 
 ---
 
